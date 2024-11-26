@@ -1,0 +1,66 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.page-item {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.page-item .page-link {
+  color: #00ccff; /* Naranja similar al traje de Goku */
+  border: 1px solid #0c0c0c; /* Borde oscuro para darle un toque más fuerte */
+  border-radius: 5px;
+  padding: 8px 12px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-item .page-link:hover {
+  background-color: #0c7adb; /* Azul intenso para recordar el cabello de personajes como Vegeta */
+  color: #fff;
+}
+
+.page-item.active .page-link {
+  background-color: #0c7adb;
+  border-color: #0c7adb;
+  color: #fff;
+}
+
+.page-item.disabled .page-link {
+  color: #bbb;
+  pointer-events: none;
+  background-color: #f4f4f4;
+}
+
+.pagination .page-item:first-child .page-link {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination .page-item:last-child .page-link {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+/* Cambiar los colores de los botones */
+.btn-primary {
+  background-color: blue;
+  color: white;
+  border: none;
+}
+
+.btn-danger {
+  background-color: rgb(14, 13, 13);
+  color: rgb(14, 13, 13);
+  border: none;
+}
+
+/* Opcionalmente puedes añadir efectos al pasar el mouse */
+.page-link:hover {
+  opacity: 0.8;
+}

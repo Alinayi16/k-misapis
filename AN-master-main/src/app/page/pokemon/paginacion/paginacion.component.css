@@ -1,0 +1,43 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.page-item {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.page-item .page-link {
+  color: #0e0d0d; /* Amarillo inspirado en Pikachu */
+  border: 2px solid #0f0f0f; /* Azul oscuro inspirado en la Poké Ball */
+  border-radius: 0; /* Cambiar a esquinas cuadradas */
+  padding: 8px 12px;
+  text-decoration: none;
+  background-color: #1d6443;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-item .page-link:hover {
+  background-color: #05ff6d;
+  color: #3b4cca; /* Invertir colores al pasar el ratón */
+}
+
+.page-item.active .page-link {
+  background-color: #3b4cca; /* Azul para indicar la página activa */
+  border-color: #070707;
+  color: #56b186; /* Blanco para resaltar */
+}
+
+.page-item.disabled .page-link {
+  color: #3b8a5e;
+  pointer-events: none;
+  background-color: #f0f0f0; /* Gris claro para el estado deshabilitado */
+}
+
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+  border-radius: 0; /* Eliminar el redondeo para el primer y último botón */
+}

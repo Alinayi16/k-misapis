@@ -1,0 +1,54 @@
+<div class="modal fade" #modalElement>
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header bg-dark text-white">
+        <h1 class="modal-title fs-4" id="exampleModalLabel">{{ coctel['strDrink'] }}</h1>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <div class="row">
+          <!-- Image Section -->
+          <div class="col-12 col-md-6 text-center mb-3">
+            <img src="{{ coctel['strDrinkThumb'] }}" class="rounded img-fluid shadow" alt="{{ coctel['strDrink'] }}">
+          </div>
+
+          <!-- Cocktail Details Section -->
+          <div class="col-12 col-md-6">
+            <div class="p-2 border-bottom">
+              <p><strong>ID:</strong> {{ coctel['idDrink'] }}</p>
+              <p><strong>Categoría:</strong> {{ coctel['strCategory'] }}</p>
+              <p><strong>Tipo de bebida:</strong> {{ coctel['strAlcoholic'] }}</p>
+              <p><strong>Se sirve en:</strong> {{ coctel['strGlass'] }}</p>
+            </div>
+
+            <!-- Ingredients Section -->
+            <div class="mt-3">
+              <h5><strong>Ingredientes</strong></h5>
+              <ul class="list-unstyled">
+                <li *ngIf="coctel['strIngredient1']">- {{ coctel['strIngredient1'] }}</li>
+                <li *ngIf="coctel['strIngredient2']">- {{ coctel['strIngredient2'] }}</li>
+                <li *ngIf="coctel['strIngredient3']">- {{ coctel['strIngredient3'] }}</li>
+                <li *ngIf="coctel['strIngredient4']">- {{ coctel['strIngredient4'] }}</li>
+                <!-- Add the rest of the ingredients as needed -->
+              </ul>
+            </div>
+
+            <!-- Instructions Section -->
+            <div class="mt-3">
+              <h5><strong>Instrucciones</strong></h5>
+              <p>{{ coctel['strInstructionsES'] || coctel['strInstructions'] }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer justify-content-between">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

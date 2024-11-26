@@ -1,0 +1,39 @@
+<table class="table mt-2" *ngIf="kdrama?.kdrama">
+    <thead>
+        <tr class="text-center">
+            <th scope="col">#</th>
+            <th scope="col">Título</th>
+            <th scope="col">Género</th>
+            <th scope="col">Año de Estreno</th>
+            <th scope="col">País de Origen</th>
+            <th scope="col">Actores Principales</th>
+            <th scope="col">Sinopsis</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let drama of kdrama?.kdrama; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ drama.titulo }}</td>
+            <td>
+                <!-- Mostrar cada género como una lista separada por comas -->
+                {{ drama.genero.join(', ') }}
+            </td>
+            <td>{{ drama.anoEstreno }}</td>
+            <td>{{ drama.paisOrigen }}</td>
+            <td>
+                <!-- Mostrar cada actor como una lista separada por comas -->
+                {{ drama.actoresPrincipales.join(', ') }}
+            </td>
+            <td>
+                {{ drama.sinopsis}}
+            </td>
+            <td class="row">
+                <!-- Botones de acción -->
+                <button class="btn btn-outline-success col me-1" (click)="editarDrama(drama)">Editar</button>
+                <button class="btn btn-outline-danger col me-1" (click)="eliminarDrama(drama._id!)">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<app-modal-creacion></app-modal-creacion>

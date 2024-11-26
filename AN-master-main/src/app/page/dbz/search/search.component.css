@@ -1,0 +1,64 @@
+/* Estilos generales */
+body {
+    background: #f4e2d8; /* Fondo claro con tono cálido */
+    font-family: 'Kanit', sans-serif; /* Fuente moderna para dar un toque dinámico */
+}
+
+.input-group {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #2419bb, #f7e539); /* Degradado naranja a dorado estilo Esferas del Dragón */
+}
+
+.form-control {
+    border: none;
+    outline: none;
+    padding: 12px;
+    border-radius: 0;
+    background: #fff; /* Fondo blanco para contraste */
+    color: #333;
+    font-size: 1rem;
+}
+
+.form-control::placeholder {
+    color: #666;
+    font-style: italic;
+}
+
+.btn-outline-secondary {
+    background: linear-gradient(45deg, #0066cc, #003366); /* Degradado azul oscuro inspirado en los trajes de Goku y Vegeta */
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline-secondary:hover {
+    background: linear-gradient(45deg, #f7e539, #190eaf); /* Cambia a dorado y naranja estilo Super Saiyan en hover */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+.bi-search {
+    margin-right: 5px;
+    fill: #fff;
+    transition: fill 0.3s ease;
+}
+
+.btn-outline-secondary:hover .bi-search {
+    fill: #ffd700; /* Icono dorado en hover */
+}
+
+/* Estilo de la caja de input en focus */
+.form-control:focus {
+    box-shadow: none;
+    border: 2px solid #f7e539; /* Borde dorado inspirado en Super Saiyan */
+}
+
+.input-group {
+    border: 2px solid #3213dd; /* Borde inspirado en las Esferas del Dragón */
+}
+

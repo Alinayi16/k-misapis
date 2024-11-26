@@ -1,0 +1,26 @@
+<div class="row mt-2 mb-2"> 
+  <div class="col-12">
+    <nav aria-label="Paginación de personajes de Dragon Ball Z">
+      <ul class="pagination justify-content-center">
+        <!-- Botón para la página anterior -->
+        <li class="page-item" [ngClass]="{'disabled': !prevURL}">
+          <a class="page-link"
+             [ngClass]="{'btn-danger': !prevURL, 'btn-primary': prevURL}" 
+             (click)="loadDbzs(prevURL!)">
+            Anterior
+          </a>
+        </li>
+
+        <!-- Botón para la página siguiente -->
+        <li class="page-item" [ngClass]="{'disabled': !nextURL}">
+          <a class="page-link"
+             [ngClass]="{'btn-danger': !nextURL, 'btn-primary': nextURL}" 
+             (click)="loadDbzs(nextURL!)">
+            Siguiente
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+

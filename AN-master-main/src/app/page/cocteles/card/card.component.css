@@ -1,0 +1,58 @@
+/* Estilos para la lista de cartas */
+.flixed-card {
+    background-color: #f5f5f5; /* Color de fondo gris claro */
+    border: 2px solid #ff5722; /* Borde naranja */
+    border-radius: 12px; /* Mantener bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+    padding: 16px; /* Espacio interno */
+}
+
+.flixed-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.flixed-body {
+    background-color: #ffffff; /* Fondo blanco para el cuerpo de la tarjeta */
+    border-top: 2px solid #ff5722; /* Borde superior */
+    padding: 16px;
+    text-align: center;
+}
+
+/* Estilo para la imagen dentro de la tarjeta */
+.flixed-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    object-fit: cover;
+    margin-bottom: 12px; /* Espacio entre la imagen y el contenido */
+}
+
+/* Estilo para el botón */
+.btn-primary {
+    background-color: #ff5722; /* Fondo del botón naranja */
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e64a19; /* Color más oscuro al pasar el ratón */
+}
+
+/* Estilo para el título de la tarjeta */
+.card-title {
+    color: #333333; /* Color del texto del título */
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+/* Estilo para el texto de la tarjeta */
+.card-text {
+    color: #666666; /* Color gris del texto */
+    font-size: 1rem;
+    margin-bottom: 6px;
+}

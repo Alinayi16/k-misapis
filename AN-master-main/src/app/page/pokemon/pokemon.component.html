@@ -1,0 +1,12 @@
+
+<div class="row">
+    <poke-busqueda (eventSearch)="searchPokemon($event)" />
+</div>
+
+
+<pokemon-pagi (eventNewPokemons)="setNewPokemon($event)"  />
+
+
+<pokemon-card [pokemonsAll]="pokemons" />
+
+<pokemon-pagi (eventNewPokemons)="setNewPokemon($event)"/>

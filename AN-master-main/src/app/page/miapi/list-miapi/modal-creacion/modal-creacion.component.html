@@ -1,0 +1,42 @@
+<div class="modal fade" #modalElement tabindex="-1" aria-labelledby="kdramaModalLabel" aria-hidden="true" *ngIf="ejemplo">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>{{ ejemplo._id }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <div class="modal-body">
+  
+          <label for="titulo" class="form-label">Título</label>
+          <input type="text" id="titulo" class="form-control" value="{{ ejemplo.titulo }}" #titulo >
+  
+          <label for="genero" class="form-label">Género</label>
+          <input type="text" id="genero" class="form-control" value="{{ ejemplo.genero.join(', ') }}" #genero >
+  
+          <label for="anoEstreno" class="form-label">Año de Estreno</label>
+          <input type="number" id="anoEstreno" class="form-control" value="{{ ejemplo.anoEstreno }}" #anoEstreno >
+  
+          <label for="paisOrigen" class="form-label">País de Origen</label>
+          <input type="text" id="paisOrigen" class="form-control" value="{{ ejemplo.paisOrigen }}" #paisOrigen >
+  
+          <label for="actoresPrincipales" class="form-label">Actores Principales</label>
+          <input type="text" id="actoresPrincipales" class="form-control" value="{{ ejemplo.actoresPrincipales.join(', ') }}" #actoresPrincipales >
+  
+          <label for="sinopsis" class="form-label">Sinopsis</label>
+          <textarea id="sinopsis" class="form-control" rows="3" #sinopsis>{{ ejemplo.sinopsis }}</textarea>
+  
+        </div>
+  
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button"
+            class="btn btn-success"
+            (click)="editarDrama(titulo.value, genero.value, anoEstreno.value , paisOrigen.value, actoresPrincipales.value, sinopsis.value, ejemplo._id!)">
+            Guardar Cambios
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,29 @@
+<!-- Lista de cartas -->
+<div class="row mb-3 g-3">
+    <ng-container
+        *ngIf="pokemonsAll && pokemonsAll.results && pokemonsAll.results.length>0"
+        ; else noPokemons>
+        <div class="col-3" *ngFor="let pokemon of pokemonsAll.results">
+            <div class="card flixed-card" >
+                <img [src]="pokemon.data?.sprites?.versions?.['generation-v']?.['black-white']?.animated?.front_default"
+                 class="card-img-top flixed-img" alt="...">
+                <div class="card-body flixed-body">
+                    <h5 class="card-title">{{pokemon.name}}</h5>
+                    <p class="card-text">{{pokemon.data?.base_experience}}</p>
+                    <a class="btn btn-primary" (click)="openModal(pokemon.data!)">Mas Informacion</a>
+                </div>
+            </div>
+        </div>
+
+    </ng-container>
+</div>
+
+<ng-template #noPokemons>
+    <div class="col -12">
+        <div class="alert alert-warning" role="alert">
+            No Pokemons found
+        </div>
+    </div>
+</ng-template>
+
+<app-modal></app-modal>

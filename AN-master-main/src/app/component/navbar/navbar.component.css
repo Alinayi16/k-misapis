@@ -1,0 +1,12 @@
+
+/* Botón de inicio de sesión */
+.btn-danger {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  

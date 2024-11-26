@@ -1,0 +1,64 @@
+/* Estilos generales */
+body {
+    background: #f0f8ff;
+    font-family: 'Press Start 2P', cursive; /* Fuente retro estilo Pokémon */
+}
+
+.input-group {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1a5c40; /* Color amarillo inspirado en Pikachu */
+}
+
+.form-control {
+    border: none;
+    outline: none;
+    padding: 12px;
+    border-radius: 0;
+    background: #fff; /* Fondo blanco para mejor contraste */
+    color: #333;
+    font-size: 1rem;
+}
+
+.form-control::placeholder {
+    color: #666;
+    font-style: italic;
+}
+
+.btn-outline-secondary {
+    background: linear-gradient(45deg, #2d7e48, #09e25c); /* Degradado rojo a amarillo */
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline-secondary:hover {
+    background: linear-gradient(45deg, #96ee9d, #29c436); /* Invertir degradado en hover */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+.bi-search {
+    margin-right: 5px;
+    fill: #fff;
+    transition: fill 0.3s ease;
+}
+
+.btn-outline-secondary:hover .bi-search {
+    fill: #f0f8ff; /* Color más claro para el icono en hover */
+}
+
+/* Estilo de la caja de input en focus */
+.form-control:focus {
+    box-shadow: none;
+    border: 2px solid #3b4cca; /* Azul inspirado en los juegos de Pokémon */
+}
+
+.input-group {
+    border: 2px solid #38d34d; /* Borde inspirado en el color de la Pokébola */
+    border-radius: 10px;
+}

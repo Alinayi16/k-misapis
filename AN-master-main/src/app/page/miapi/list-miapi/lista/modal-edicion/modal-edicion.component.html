@@ -1,0 +1,42 @@
+<div class="modal fade" #modalElement tabindex="-1" aria-labelledby="kdramaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>Agregando Kdrama</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <!-- Título del Kdrama -->
+                <label for="titulo" class="form-label">Título</label>
+                <input type="text" id="titulo" class="form-control" #titulo>
+
+                <!-- Géneros del Kdrama -->
+                <label for="genero" class="form-label">Género</label>
+                <input type="text" id="genero" class="form-control" #genero>
+
+                <!-- Año de estreno del Kdrama -->
+                <label for="anoEstreno" class="form-label">Año de Estreno</label>
+                <input type="number" id="anoEstreno" class="form-control" #anoEstreno>
+
+                <!-- País de origen del Kdrama -->
+                <label for="paisOrigen" class="form-label">País de Origen</label>
+                <input type="text" id="paisOrigen" class="form-control" #paisOrigen>
+
+                <!-- Actores principales -->
+                <label for="actoresPrincipales" class="form-label">Actores Principales</label>
+                <input type="text" id="actoresPrincipales" class="form-control" #actoresPrincipales>
+
+                <!-- Sinopsis del Kdrama -->
+                <label for="sinopsis" class="form-label">Sinopsis</label>
+                <textarea id="sinopsis" class="form-control" #sinopsis></textarea>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success"
+                    (click)="Agregar(titulo.value, genero.value, anoEstreno.value, paisOrigen.value, actoresPrincipales.value, sinopsis.value)">Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>

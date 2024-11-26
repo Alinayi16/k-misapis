@@ -1,0 +1,29 @@
+<div class="modal fade" #modalElement tabindex="-1" aria-labelledby="dbzModalLabel" aria-hidden="true"
+     *ngIf="personajeDbz.originPlanet">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ personajeDbz.name }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 mb-4 principal">
+                        <img class="img-fluid d-block mx-auto img-custom-size" [src]="personajeDbz.image" alt="{{ personajeDbz.name }}">
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <h6>ID: <span>{{ personajeDbz.id }}</span></h6>
+                        <h6>Ki: <span>{{ personajeDbz.ki }}</span></h6>
+                        <h6>Máximo Ki: <span>{{ personajeDbz.maxKi }}</span></h6>
+                        <h6>Raza: <span>{{ personajeDbz.race }}</span></h6>
+                        <h6>Descripción:</h6>
+                        <p>{{ personajeDbz.description }}</p>
+                    </div>
+                </div>
+
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>

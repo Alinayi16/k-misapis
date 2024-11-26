@@ -1,0 +1,29 @@
+/* Estilo para el input del buscador */
+.input-group .form-control {
+    border: 2px solid #ff5722; /* Color del borde (naranja) */
+    border-radius: 0.25rem; /* Ajusta el redondeo de los bordes según sea necesario */
+    transition: border-color 0.3s; /* Efecto de transición al cambiar el color */
+}
+
+.input-group .form-control:focus {
+    border-color: #ff3d3d; /* Color del borde al enfocar (rojo más intenso) */
+    box-shadow: 0 0 5px rgba(255, 61, 61, 0.5); /* Sombra alrededor del input al enfocar */
+}
+
+/* Estilo para el botón del buscador */
+.input-group .btn {
+    border: 2px solid #ff5722; /* Color del borde del botón (naranja) */
+    border-radius: 0 0.25rem 0.25rem 0; /* Mantiene los bordes redondeados en la parte derecha */
+    background-color: #ffffff; /* Fondo blanco para el botón */
+    color: #ff5722; /* Color del texto del botón */
+    transition: background-color 0.3s, color 0.3s; /* Efecto de transición */
+}
+
+.input-group .btn:hover {
+    background-color: #ff5722; /* Fondo naranja al pasar el ratón */
+    color: #ffffff; /* Texto blanco al pasar el ratón */
+}
+
+input.form-control {
+    color: red;
+  }

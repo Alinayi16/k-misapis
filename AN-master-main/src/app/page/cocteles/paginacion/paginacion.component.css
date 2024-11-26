@@ -1,0 +1,7 @@
+.page-link {
+    color: rgb(8, 8, 8);
+  }
+  .page-link {
+    color: orange; /* Cambia el color del texto a naranja */
+    border-color: orange; /* Cambia el color del borde a naranja */
+  }

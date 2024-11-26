@@ -1,0 +1,7 @@
+<nav aria-label="...">
+  <ul class="pagination justify-content-center">
+    <li class="page-item mt-1" *ngFor="let letras of abecedario; let i = index">
+      <a class="page-link" [ngClass]="{'active':letras == letraClickeada}" (click)="cogerLetra(letras)" (click)="siguientePagina(letraClickeada)">{{ letras.toUpperCase() }}</a>
+    </li>
+  </ul>
+</nav>

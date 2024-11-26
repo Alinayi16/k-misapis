@@ -1,0 +1,42 @@
+<div class="row mb-3 g-3">
+    <ng-container *ngIf="cocteles && cocteles.drinks && cocteles.drinks.length > 0; else noCocteles">
+        <div class="col-4" *ngFor="let coc of cocteles.drinks">
+            <div class="card flixed-card">
+                <div *ngIf="!loadingImg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"
+                        width="176" height="176"
+                        style="shape-rendering: auto; display: block; background: rgb(255, 255, 255);"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                            <path style="transform:scale(0.87);transform-origin:50px 50px" stroke-linecap="round"
+                                d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z"
+                                stroke-dasharray="169.34869262695312 87.24023559570313" stroke-width="2"
+                                stroke="#0c9be9" fill="none">
+                                <animate values="0;256.58892822265625" keyTimes="0;1" dur="1.8181818181818181s"
+                                    repeatCount="indefinite" attributeName="stroke-dashoffset"></animate>
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <img *ngIf="coc['strDrinkThumb']" [src]="coc['strDrinkThumb']" class="card-img-top flixed-img" alt="..."
+                    loading="lazy" (load)="loadingImg=true">
+                <div class="card-body flixed-body">
+                    <h5 class="card-title">{{ coc['strDrink'] }}</h5>
+                    <p class="card-text">ID: {{ coc['idDrink'] }}</p>
+                    <p class="card-text">{{ coc['strAlcoholic'] }}</p>
+                    <p class="card-text">{{ coc['strCategory'] }}</p>
+                    <li class="btn btn-primary mx-auto d-block w-100" *ngIf="coc" (click)="openModal(coc)">Más info</li>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-template #noCocteles>
+        <div class="col-12">
+            <div class="alert alert-warning" role="alert">
+                No se han encontrado cocteles
+            </div>
+        </div>
+    </ng-template>
+</div>
+<app-modal></app-modal>

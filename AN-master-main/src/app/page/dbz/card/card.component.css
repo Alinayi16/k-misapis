@@ -1,0 +1,112 @@
+/* Estilos generales */
+body {
+    background-color: #e0f7fa; /* Color de fondo claro */
+    font-family: 'Arial', sans-serif; /* Fuente sencilla */
+    padding: 20px;
+}
+
+/* Estilo de las tarjetas */
+.flixed-card {
+    border: 2px solid #161563; /* Bordes dorados */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: row; /* Contenido en filas */
+    height: 100%; /* Altura completa para uniformidad */
+    overflow: hidden;
+    background-color: #d8eef8;
+}
+
+.flixed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de la imagen */
+.flixed-img {
+    object-fit: cover; /* Para que la imagen ocupe todo el espacio disponible */
+    width: 200px; /* Ancho fijo para la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Estilo del cuerpo de la tarjeta */
+.flixed-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; /* La información ocupa el resto del espacio */
+}
+
+.flixed-body .card-title {
+    font-size: 1.5rem;
+    color: #456788; /* Color rojo como referencia a Dragon Ball Z */
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+.flixed-body .card-text {
+    color: #555555;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Botón de "Más Información" */
+.flixed-body .btn-primary {
+    background-color: #6dbaec; /* Color naranja para el botón */
+    border: none;
+    color: #ffffff;
+    transition: background-color 0.3s;
+    align-self: flex-start; /* Alinea el botón a la izquierda */
+    margin-top: 10px;
+}
+
+.flixed-body .btn-primary:hover {
+    background-color: #4350ff; /* Color más claro al hacer hover */
+}
+
+/* Alert de "No se encontraron personajes de Dragon Ball Z" */
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsividad */
+.row {
+    justify-content: center;
+}
+
+.col-12 {
+    display: flex;
+    justify-content: center;
+}
+
+.col-12 .flixed-card {
+    width: 100%; /* Para que la tarjeta ocupe todo el ancho disponible */
+    max-width: 800px; /* Ancho máximo para que no se estire demasiado */
+    margin-bottom: 20px;
+}
+
+/* Ajustes en pantallas pequeñas */
+@media (max-width: 768px) {
+    .flixed-card {
+        flex-direction: column; /* Las imágenes y el texto se apilan en dispositivos pequeños */
+    }
+
+    .flixed-img {
+        width: 100%; /* La imagen ocupa el ancho completo */
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0; /* Ajuste de bordes */
+    }
+
+    .flixed-body {
+        padding: 10px;
+    }
+}

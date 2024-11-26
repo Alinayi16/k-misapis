@@ -1,0 +1,33 @@
+
+<!-- Lista de cartas -->
+<div class="row mb-3 g-3">
+    <ng-container
+        *ngIf="dbzAll && dbzAll.items && dbzAll.items.length > 0"
+        ; else noDbzCharacters>
+        <div class="col-6" *ngFor="let dbz of dbzAll.items">
+            <div class="card flixed-card">
+                <img [src]="dbz.Data?.image"
+                     class="card-img-top flixed-img" alt="...">
+                <div class="card-body flixed-body">
+                    <h5 class="card-title">{{ dbz.name }}</h5>
+                    <p class="card-text">{{ dbz.Data?.description }}</p>
+                    <p class="card-text"><strong>Ki:</strong> {{ dbz.Data?.ki }} / {{ dbz.Data?.maxKi }}</p>
+                    <p class="card-text"><strong>Raza:</strong> {{ dbz.race }}</p>
+                    <p class="card-text"><strong>Género:</strong> {{ dbz.gender }}</p>
+                    <p class="card-text"><strong>Afiliación:</strong> {{ dbz.affiliation }}</p>
+                    <li class="btn btn-primary" (click)="openModal(dbz.Data!)">Más Información</li>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+<ng-template #noDbzCharacters>
+    <div class="col-12">
+        <div class="alert alert-warning" role="alert">
+            No se encontraron personajes de Dragon Ball Z
+        </div>
+    </div>
+</ng-template>
+
+<app-modal></app-modal>

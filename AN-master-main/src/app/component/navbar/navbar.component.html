@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Mi aplicación de Angular</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#" routerLink="DBZ" routerLinkActive="active" >API
+                        de DBZ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" routerLink="pokemon" routerLinkActive="active"> API de Pokémon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" routerLink="cocteles" routerLinkActive="active">API de Cocteles</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Mi API
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/Miapi/list" routerLinkActive="active">Lista</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <ng-container *ngIf="user$ | async as user; else showLog">
+                <div class="d-flex align-items-center">
+                    <img [src]="user.photoURL" alt="{{ user.displayName }}" class="img-fluid rounded-circle"
+                        style="width: 40px; height: 40px;">
+                    <span class="ms-2">{{ user.displayName }}</span>
+                    <button class="btn btn-outline-danger ms-2" (click)="logOut()" type="button">
+                        <i class="bi bi-box-arrow-left"></i> Logout
+                    </button>
+                </div>
+
+            </ng-container>
+
+            <ng-template #showLog>
+                <button class="btn btn-danger" (click)="onGoogleLogin()" type="button">Login <i
+                        class="bi bi-google"></i></button>
+            </ng-template>
+        </div>
+    </div>
+</nav>

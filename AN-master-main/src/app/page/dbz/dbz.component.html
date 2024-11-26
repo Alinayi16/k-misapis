@@ -1,0 +1,11 @@
+
+<div class="row custom-background">
+    <dbz-search (eventSearch)="searchDbz($event)" />
+</div>
+
+<Dbz-pagi (eventNewDbzs)="setNewDbz($event)"/>
+
+
+<Dbz-card [dbzAll]="dbzs" />
+
+<Dbz-pagi (eventNewDbzs)="setNewDbz($event)"/>
